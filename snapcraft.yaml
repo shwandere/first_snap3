@@ -20,10 +20,10 @@ parts:
     plugin: copy
     source: ./src
     files: 
-        /usr/local/lib/libopencv_core.so: libopencv_core.so
-        /usr/local/lib/libopencv_highgui.so: libopen_highgui.so
-        /usr/local/lib/libopencv_imgproc.so: libopencv_imgproc.so
-        /usr/local/lib/libopencv_imgcodecs.so: libopencv_imgcodecs.so
+        /usr/local/lib/libopencv_core.so.3.2.0 : libopencv_core.so
+        /usr/local/lib/libopencv_highgui.so.3.2.0 : libopen_highgui.so
+        /usr/local/lib/libopencv_imgproc.so.3.2.0 : libopencv_imgproc.so
+        /usr/local/lib/libopencv_imgcodecs.so.3.2.0 : libopencv_imgcodecs.so
   
     stage:
         - libopencv_core.so
