@@ -16,18 +16,18 @@ apps:
   
 parts:
   
-  #files-copy:
-    #plugin: copy
-    #source: ./src
-    #files: 
-        #../src/files/libraries/libopencv_core.so: libopencv_core.so
-        #../src/files/libraries/libopencv_highgui.so: libopen_highgui.so
-        #../src/files/libraries/libopencv_imgproc.so: libopencv_imgproc.so
-        #../src/files/libraries/libopencv_imgcodecs.so: libopencv_imgcodecs.so
+  files-copy:
+    plugin: copy
+    source: ./src
+    files: 
+        /usr/local/lib/libopencv_core.so: libopencv_core.so
+        /usr/local/lib/libopencv_highgui.so: libopen_highgui.so
+        /usr/local/lib/libopencv_imgproc.so: libopencv_imgproc.so
+        /usr/local/lib/libopencv_imgcodecs.so: libopencv_imgcodecs.so
   
   image-reading2:
     plugin: cmake
     source: ./src
     build-packages:
         - g++
-    #after: [files-copy]
+    after: [files-copy]
