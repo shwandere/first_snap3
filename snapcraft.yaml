@@ -25,6 +25,12 @@ parts:
         /usr/local/lib/libopencv_imgproc.so: libopencv_imgproc.so
         /usr/local/lib/libopencv_imgcodecs.so: libopencv_imgcodecs.so
   
+    stage:
+        - libopencv_core.so
+        - libopencv_highgui.so
+        - libopencv_imgcodecs.so
+        - libopencv_imgproc.so
+  
   image-reading2:
     plugin: cmake
     source: ./src
