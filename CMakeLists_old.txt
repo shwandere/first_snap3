@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 2.6)
+
+set (CMAKE_CXX_STANDARD 14)
+
+project(image-reading)
+
+set (CMAKE_INSTALL_PREFIX "/media/linux/New Volume/snap/image-reading")
+
+find_package(OpenCV REQUIRED)
+
+add_executable(code.cpp)
+
+target_link_libraries(image-reading ${OpenCV_LIBS})
+
+install(TARGETS image-reading RUNTIME DESTINATION bin)

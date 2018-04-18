@@ -1,0 +1,33 @@
+name: image-reading2 # you probably want to 'snapcraft register <name>'
+version: '0.1' # just for humans, typically '1.2+git' or '1.3.2'
+summary: My 1st snap ever # 79 char long summary
+description: |
+  This is my-snaps description. You have a paragraph or two to tell the
+  most important story about your snap. Keep it under 100 words though,
+  we live in tweetspace and your description wants to look good in the snap
+  store.
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs and slots
+
+apps:
+  image-reading2:
+    command: image-reading2
+  
+parts:
+  
+  #files-copy:
+    #plugin: copy
+    #source: ./src
+    #files: 
+        #../src/files/libraries/libopencv_core.so: libopencv_core.so
+        #../src/files/libraries/libopencv_highgui.so: libopen_highgui.so
+        #../src/files/libraries/libopencv_imgproc.so: libopencv_imgproc.so
+        #../src/files/libraries/libopencv_imgcodecs.so: libopencv_imgcodecs.so
+  
+  image-reading2:
+    plugin: cmake
+    source: ./src
+    build-packages:
+        - g++
+    #after: [files-copy]

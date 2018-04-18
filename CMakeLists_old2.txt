@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 2.6)
+set (CMAKE_CXX_COMPILER /usr/bin/g++ )
+set (CMAKE_CXX_STANDARD 14)
+#find_package(OpenCV REQUIRED)
+
+project(image_reading2)
+
+set(PROJECT_SOURCE_DIR "image_reading2/src")
+set(PROJECT_BINARY_DIR "image_reading2/build/")
+set(myprog code.cpp)
+#set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} "/media/linux/New Volume/snap/opencv-3.2.0/build/")
+#message(STATUS ${CMAKE_PREFIX_PATH})
+#find_package(OpenCV REQUIRED)
+#add_library(opencvlib ${OpenCV_LIBS})
+
+#message(image-reading2 ${OpenCV_LIBS})
+set(LIBRARIES "libraries")
+set(INLCUDE "include")
+add_executable(${PROJECT_NAME} ${myprog})
+include_directories(${INLUCDE})
+target_link_libraries( ${PROJECT_NAME} ${LIBRARIES} ${OpenCV_LIBS})
